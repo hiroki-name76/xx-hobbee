@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
   get 'classrooms/category'
   get 'classrooms/index'
-
+  get 'reserve/new'
   resource :registrations, only:[:new, :create]
   resource :sessions, only: [:new, :create, :destroy,]
   resource :classrooms, only:[:new, :create, :show]

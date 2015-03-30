@@ -5,13 +5,12 @@
     .main-header
       %img{:src => "assets/shot.jpg"}/
     .school
-      %img{:src => "assets/profile.png"}/
       .classname ABCゴルフスクール
       .clear
       %ul
         %li 住所：東京都練馬区中村南２−１８−１２
         %li 金額：5000円/回
-      %a{:href => "reserve.html"}
+      = link_to reserve_new_path do
         %button 体験予約
     .clear
 
