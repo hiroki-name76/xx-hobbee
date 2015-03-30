@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %title XHobbee
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    %body{class: "#{controller.controller_path + " " + controller.action_name}"}
+  %body
+    / header
+    %nav#header
+      %ul.content
+        .float-left
+          %ul
+            %li
+              = link_to image_tag('hobbee.png'),classrooms_index_path
+        .float-right
+          %li
+            =link_to "教室登録", new_classrooms_path 
+          %li
+            %a{:href => "edit_user_path"}
+              %img{:src => "assets/profile.jpg", :width => "30"}/
+        .clear
+    / header end
+    = yield
+

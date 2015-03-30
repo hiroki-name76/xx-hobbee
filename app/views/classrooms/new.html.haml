@@ -1,0 +1,51 @@
+/ main
+%form.content
+%form{:action => "cgi-bin/formmail.cgi", :method => "post"}
+  %p
+    カテゴリ選択:
+    %br/
+    %select{:name => ""}
+      %option{:value => "aqua"} アクアリウム
+      %option{:value => "model"} プラモデル
+      %option{:value => "fish"} 釣り
+      %option{:value => "gardnig"} ガーデニング
+      %option{:value => "magic"} 手品
+  %p
+    アイキャッチ画像：
+    %input{:name => "name", :size => "40", :type => "file"}/
+  %p
+    image画像：
+    %input{:name => "name", :size => "40", :type => "file"}/
+  %p
+    タイトル：
+    %input{:name => "name", :size => "40", :type => "text"}/
+  %p
+    住所：
+    %input{:name => "name", :size => "60", :type => "text"}/
+  %p
+    金額：
+    %input{:name => "name", :size => "30", :type => "text"}/
+  %p
+    こんな人におすすめ:
+    %br/
+    %textarea{:cols => "50", :name => "name", :rows => "10"}
+  %p
+    魅力：
+    %br/
+    画像1
+    %input{:name => "name", :type => "file"}/
+  %br/
+  おすすめポイント1
+  %br/
+  %textarea{:cols => "50", :name => "name", :rows => "10"}
+  %br/
+  画像2
+  %input{:name => "name", :type => "file"}/
+  %br/ 
+  おすすめポイント2
+  %br/
+  %textarea{:cols => "50", :name => "name", :rows => "10"}
+  %br/
+  %button{:style => ""} 登録
+  　　　
+/ main end

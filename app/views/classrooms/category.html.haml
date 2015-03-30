@@ -1,0 +1,50 @@
+/ main
+#main
+  %h2 スポーツ
+  %img{:src => "sports.jpg", :width => "150"}/
+  .top-right
+    「スポーツ」に関する情報が集まっているページです。
+    スポーツをすることで仲間が出来たり、運動不足を解消したり、
+    さまざまな良いことがありますよね。
+    ぜひあなたにあうスポーツをみつけてください
+  .clear
+  .content
+    .left.float-left
+      %ul
+        %li
+          = link_to 'ホーム' , classrooms_path    
+        %li
+          = link_to 'アクアリウム' , classrooms_category_path
+        %li
+          = link_to 'プラモデル', classrooms_category_path
+        %li
+          = link_to '釣り', classrooms_category_path
+        %li
+          = link_to 'ガーデニング', classrooms_category_path
+        %li
+          = link_to '手品', classrooms_category_path
+          
+    .center.float-left
+      .images
+        = link_to classrooms_category_path do
+        .image
+          .image-back
+            %h2{"image-title" => ""} class room
+            %ul
+              %li place
+              %li price
+              %li company
+        = link_to classrooms_category_path do
+          あいう
+        .image
+          .image-back
+            %h2{"image-title" => ""} class room
+            %ul
+              %li place
+              %li price
+              %li company
+        .clear
+  / main end
+  / footer
+  #footer
+  / footer end
