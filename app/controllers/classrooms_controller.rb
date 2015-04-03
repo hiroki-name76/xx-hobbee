@@ -8,8 +8,13 @@ class ClassroomsController < ApplicationController
 
   def show
   end
+ 
+  def create
+    
+  end
 
   def category
+    
   end
 
 end

@@ -1,13 +1,21 @@
-%h1 Registrations#new
+.content
+  %p 会員登録
+  - @user.errors.each do |attr, message|
+    .alert.alert-danger= message
 
-= form_for @user, url:registrations_path,method: :post do |f|
-  =f.label :名前
-  =f.text_field :name
-  =f.label :メールアドレス
-  =f.text_field :email
-  = f.label :パスワード
-  = f.password_field :password
-  = f.label :パスワード確認
-  = f.password_field :password_confermation
-  =f.submit
-  
+  = form_for @user, url:registrations_path , method: :post do |f|
+    =f.label :名前
+    =f.text_field :name,:placeholder => "名前を入力してください(英数字6文字以上)", class: "form-control" 
+
+    =f.label :メールアドレス
+    =f.text_field :email,:placeholder => "メールアドレス", class: "form-control"
+
+    = f.label :パスワード
+    = f.password_field :password,:placeholder => "パスワード(英数字6文字以上)", class: "form-control"
+
+    = f.label :パスワード確認
+    = f.password_field :password_confirmation,:placeholder => "もう一度パスワードを入力してください。", class: "form-control"
+
+    %button.btn.btn-success{type: "submit"}
+      新規登録
+    

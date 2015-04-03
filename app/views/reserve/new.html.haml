@@ -1,12 +1,13 @@
-%form.content
-%form{:action => "cgi-bin/formmail.cgi", :method => "post"}
-  %p
-    タイトル：【未経験者歓迎！】ゴルフを学びませんか？？
-  %p
-    教室名：ABCゴルフスクール
-  %p
-    金額：5000円/回
-  %p
-    日時：
-    %input{:name => "name", :size => "40", :type => "date"}/
-  %button 予約する
+= form_for @reserve, url:reserve_create_path , method: :post do |f|
+  =f.label :タイトル
+  =f.text_field :title ,class: "form-control"
+
+  =f.classname :教室名
+  =f.text_field :classname ,class: "form-control"
+ 
+  =f.classname :金額
+  =f.number_field :payment ,class: "form-control"
+  
+  =f.classname :日付
+  =f.date_select :date ,class: "form-control"
+

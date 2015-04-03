@@ -1,0 +1,18 @@
+%h1 Settings#edit
+%p Find me in app/views/settings/edit.html.haml
+  
+  = form_for @user, url:setting_path , method: :put do |f|
+    =f.label :名前
+    =f.text_field :name, class: "form-control"
+
+    =f.label :メールアドレス
+    =f.text_field :email, class: "form-control"
+
+    = f.label :パスワード
+    = f.password_field :password, class: "form-control"
+
+    = f.label :パスワード確認
+    = f.password_field :password_confirmation, class: "form-control"
+
+    %button.btn.btn-success{type: "submit"}
+      新規登録
