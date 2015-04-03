@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :classrooms
+
   get 'settings/edit'
 
   root to:'classrooms#index'
