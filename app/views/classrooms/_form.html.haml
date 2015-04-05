@@ -7,34 +7,38 @@
           %li= msg
 
   .field
-    = f.label :category
+    = f.label :カテゴリー
     = f.text_field :category
   .field
-    = f.label :image_top
-    = f.text_field :image_top
+    = f.label :アイキャッチ画像
+    = f.file_field :image_top
+    = f.hidden_field :image_cache
   .field
-    = f.label :title
-    = f.text_area :title
+    = f.label :タイトル
+    = f.text_field :title
   .field
-    = f.label :adress
-    = f.text_area :adress
+    = f.label :住所
+    = f.text_field :adress
   .field
-    = f.label :payment
-    = f.text_area :payment
+    = f.label :金額
+    = f.text_field :payment
   .field
-    = f.label :recommend
+    = f.label :こんな人にオススメ
+    %br
     = f.text_area :recommend
   .field
-    = f.label :image_first
-    = f.text_field :image_first
+    = f.label :画像1
+    = f.file_field :image_first
   .field
-    = f.label :point_first
+    = f.label :おすすめポイント1
+    %br
     = f.text_area :point_first
   .field
-    = f.label :image_second
-    = f.text_field :image_second
+    = f.label :画像2
+    = f.file_field :image_second
   .field
-    = f.label :point_second
+    = f.label :オススメポイント2
+    %br
     = f.text_area :point_second
   .actions
-    = f.submit 'Save'
+    = f.submit '教室登録'

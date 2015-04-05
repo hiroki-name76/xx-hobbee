@@ -1,39 +1,68 @@
-%h1 Listing classrooms
+#main
+  .top-head.content
+  .left.float-left
+    %ul
+      %li
+        = link_to 'ホーム', root_path    
+      %li
+        = link_to 'スポーツ' , classrooms_category_path
+      %li
+        = link_to 'マンガ' , classrooms_category_path
+      %li
+        = link_to '音楽' , classrooms_category_path
+      %li
+        = link_to '映画' , classrooms_category_path
+      %li
+        = link_to 'ガーデニング' , classrooms_category_path
+      %li
+        = link_to 'その他' , classrooms_category_path
+  .center.float-left
+    .head-style 教室のリスト
+    .images
+      - @classrooms.each do |classroom|
+        = link_to classroom do
+          .image
+            .image-back
+            %h2
+              = classroom.title
+            %ul
+              %li 
+                = classroom.adress
+              %li 
+                = classroom.payment
+              %li 
+                company
+      .clear
+  .right.float-left
+    .head-style おすすめの教室
 
-%table
-  %thead
-    %tr
-      %th Category
-      %th Image top
-      %th Title
-      %th Adress
-      %th Payment
-      %th Recommend
-      %th Image first
-      %th Point first
-      %th Image second
-      %th Point second
-      %th
-      %th
-      %th
+    %ul.popular-class
+      .popular-image
+      %li
+        = link_to classrooms_path do
+          アクアリウム入門                                    
+          = image_tag "aqua.jpg"
+      .popular-image
+      %li
+        = link_to classrooms_path do
+          ②アクアリウム入門                                    
+          = image_tag "aqua.jpg"
+      .popular-image
+      %li
+        = link_to classrooms_path do
+          ③アクアリウム入門                                    
+          = image_tag "aqua.jpg"
+      .popular-image
+      %li
+        = link_to classrooms_path do
+          ④アクアリウム入門                                    
+          = image_tag "aqua.jpg"
+      .popular-image
+      %li
+        = link_to classrooms_path do
+          ⑤アクアリウム入門                                    
+          = image_tag "aqua.jpg"
+      .popular-image
+      
 
-  %tbody
-    - @classrooms.each do |classroom|
-      %tr
-        %td= classroom.category
-        %td= classroom.image_top
-        %td= classroom.title
-        %td= classroom.adress
-        %td= classroom.payment
-        %td= classroom.recommend
-        %td= classroom.image_first
-        %td= classroom.point_first
-        %td= classroom.image_second
-        %td= classroom.point_second
-        %td= link_to 'Show', classroom
-        %td= link_to 'Edit', edit_classroom_path(classroom)
-        %td= link_to 'Destroy', classroom, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Classroom', new_classroom_path
+  .clear

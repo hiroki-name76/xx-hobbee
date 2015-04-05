@@ -1,36 +1,41 @@
-%p#notice= notice
+/ main
+#content
+  .content-top    
+    %h2
+      = @classroom.title
+    .main-header
+      = @classroom.image_top
+    .school
+      .classname 
+        = @classroom.title
+      .clear
+      %ul
+        %li
+          = @classroom.adress
+        %li 
+          = @classroom.payment
 
-%p
-  %b Category:
-  = @classroom.category
-%p
-  %b Image top:
-  = @classroom.image_top
-%p
-  %b Title:
-  = @classroom.title
-%p
-  %b Adress:
-  = @classroom.adress
-%p
-  %b Payment:
-  = @classroom.payment
-%p
-  %b Recommend:
-  = @classroom.recommend
-%p
-  %b Image first:
-  = @classroom.image_first
-%p
-  %b Point first:
-  = @classroom.point_first
-%p
-  %b Image second:
-  = @classroom.image_second
-%p
-  %b Point second:
-  = @classroom.point_second
+      = link_to reserve_new_path do
+        %button 体験予約
+    .clear
 
-= link_to 'Edit', edit_classroom_path(@classroom)
-\|
-= link_to 'Back', classrooms_path
+  .main-main.content
+    %ul
+      %li
+        %h2 
+          ☆こんな人におすすめ
+        = @classroom.recommend
+
+  .main-footer.content
+    %h2 ☆魅力
+    .attraction-top
+      .attraction
+        = @classroom.image_first
+        %p
+          = @classroom.point_first
+      .attraction
+        = @classroom.image_second
+        %p
+          = @classroom.point_second
+      .clear
+/ main end

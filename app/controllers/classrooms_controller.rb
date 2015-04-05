@@ -21,6 +21,10 @@ class ClassroomsController < ApplicationController
   def edit
   end
 
+  def category
+    
+  end
+
   # POST /classrooms
   # POST /classrooms.json
   def create
@@ -69,6 +73,6 @@ class ClassroomsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def classroom_params
-      params.require(:classroom).permit(:category, :image_top, :title, :adress, :payment, :recommend, :image_first, :point_first, :image_second, :point_second)
+      params.require(:classroom).permit(:category, :image_top, :title, :adress, :payment, :recommend, :image_first, :point_first, :image_second, :point_second, :image_cache)
     end
 end

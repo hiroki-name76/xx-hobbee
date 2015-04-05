@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'classrooms/index'
   get 'reserve/new'
   get 'reserve/create'
+  get 'classrooms/category'
   
   resource :registrations, only:[:new, :create]
   resource :sessions, only: [:new, :create, :destroy,]

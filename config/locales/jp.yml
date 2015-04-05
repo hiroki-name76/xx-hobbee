@@ -22,3 +22,30 @@ ja:
                confirmation: 確認用パスワードが一致しません
              bio:
                too_long: プロフィールは200文字以内でなければなりませんß
+   activerecord:
+     errors:
+       models:
+         classroom:
+           attributes:
+             category:
+               blank: 入力してください
+             image_top:
+               blank: 入力してください
+             title:
+               blank: 入力してください
+             adress:
+               blank: 入力してください
+             payment: 
+               blank: 入力してください
+             recommend:
+               blank: 入力してください
+             image_first:
+               blank: 入力してください
+             point_first:
+               blank: 入力してください
+             image_second:
+               blank: 入力してください
+             point_second:
+               blank: 入力してください
+
+
