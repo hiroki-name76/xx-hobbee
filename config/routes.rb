@@ -1,13 +1,21 @@
 Rails.application.routes.draw do
-  root to:'registrations#new'
+  resources :classrooms
+
+  get 'settings/edit'
+
+  root to:'classrooms#index'
   get 'sessions/new'
   get 'classrooms/category'
   get 'classrooms/index'
-
+  get 'reserve/new'
+  get 'reserve/create'
+  get 'classrooms/category'
+  
   resource :registrations, only:[:new, :create]
   resource :sessions, only: [:new, :create, :destroy,]
   resource :classrooms, only:[:new, :create, :show]
   resources :users
+  resources :settings, only: [:update, :edit]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

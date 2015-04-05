@@ -1,8 +1,12 @@
+- if action_name == "create"
+  .alert.alert-danger
+  メールアドレスまたはパスワードが正しくありません。
 
+.content
+  = form_for @user, url:sessions_path,method: :post do |f|
+    =f.label :メールアドレス
+    =f.text_field :email
+    =f.label :パスワード
+    =f.password_field :password
+    =f.submit
 
-= form_for @user, url:registrations_path,method: :post do |f|
-  =f.label :メールアドレス
-  =f.text_field :email
-  =f.label :パスワード
-  =f.password_field :password
-  =f.submit

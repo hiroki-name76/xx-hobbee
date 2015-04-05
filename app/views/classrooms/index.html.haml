@@ -16,84 +16,31 @@
         = link_to 'ガーデニング' , classrooms_category_path
       %li
         = link_to 'その他' , classrooms_category_path
-
   .center.float-left
     .head-style 教室のリスト
     .images
-      = link_to classrooms_path do
-        .image
-          .image-back
-          %h2 class room
-          %ul
-            %li place
-            %li price
-            %li company
-      = link_to classrooms_path do
-        .image
-          .image-back
-          %h2 class room
-          %ul
-            %li place
-            %li price
-            %li company
-      = link_to classrooms_path do
-        .image
-          .image-back
-          %h2 class room
-          %ul
-            %li place
-            %li price
-            %li company
-      = link_to classrooms_path do
-        .image
-          .image-back
-          %h2 class room
-          %ul
-            %li place
-            %li price
-            %li company
-      = link_to classrooms_path do
-        .image
-          .image-back
-          %h2 class room
-          %ul
-            %li place
-            %li price
-            %li company
-      = link_to classrooms_path do
-        .image
-          .image-back
-          %h2 class room
-          %ul
-            %li place
-            %li price
-            %li company
-      = link_to classrooms_path do
-        .image
-          .image-back
-          %h2 class room
-          %ul
-            %li place
-            %li price
-            %li company
-      = link_to classrooms_path do
-        .image
-          .image-back
-          %h2 class room
-          %ul
-            %li place
-            %li price
-            %li company
-
-
+      - @classrooms.each do |classroom|
+        = link_to classroom do
+          .image
+            .image-back
+            %h2
+              = classroom.title
+            %ul
+              %li 
+                = classroom.adress
+              %li 
+                = classroom.payment
+              %li 
+                company
       .clear
   .right.float-left
-    .head-style 人気の教室
+    .head-style おすすめの教室
 
     %ul.popular-class
+      .popular-image
       %li
         = link_to classrooms_path do
-          ①アクアリウム入門                                    
+          アクアリウム入門                                    
           = image_tag "aqua.jpg"
       .popular-image
       %li
